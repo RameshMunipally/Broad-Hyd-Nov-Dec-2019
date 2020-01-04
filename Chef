@@ -274,6 +274,48 @@ group 'demogroup' do
   action :create
 end
 
+=======================================================demo2 04-01-2020=============
+ cp chef-starter.zip ./rameshm/
+  565  ls
+  566  cd rameshm/
+  567  ls
+  568  unzip chef-starter.zip
+  569  ls
+  570  cd chef-repo/
+  571  ls
+  572  cd ../../
+  573  ls
+  574  cp rajesh-mumbai.pem ./rameshm/chef-repo/
+  575  cd ./rameshm/chef-repo/
+  576  ls
+  577  cd ../
+  578  ls
+  579  cd chef-repo/
+  580  ls
+  581  cd cookbooks/
+  582  ls
+  583  cd ../../
+  584  cd ../rajesh/chef-repo/cookbooks/
+  585  ls
+  586  cp -r web ../../../rameshm/chef-repo/cookbooks/
+  587  cd ../../../rameshm/chef-repo/cookbooks/
+  588  ls
+  589  mv web ramesh
+  590  ls
+  591  cd ramesh/
+  592  ls
+  593  cd metadata.rb
+  594  vi metadata.rb
+  595  vi recipes/default.rb
+  596  cd ../
+  597  ls
+  598  knife cookbook upload ramesh
+  599  knife ssl fetch
+  600  knife cookbook upload ramesh
+  601  ls
+  602  cd ../
+  603  ls
+  604  knife bootstrap 13.126.97.64 --ssh-user ec2-user --sudo -i rajesh-mumbai.pem --node-name ramesh --run-list recipe[ramesh]
 
 
 
