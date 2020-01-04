@@ -1,0 +1,282 @@
+y
+    1  yum install wget -y
+    2  wget https://packages.chef.io/files/stable/chefdk/4.6.35/el/7/chefdk-4.6.35-1.el7.x86_64.rpm
+    3  ls
+    4  rpm -Uvh chefdk-4.6.35-1.el7.x86_64.rpm
+    5  chef -v
+    6  chef -h
+    7  git clone https://github.com/devopsschool-lab-exercise/Broad-Hyd-Nov-Dec-2019
+    8  git version
+    9  git version -v
+   10  yum install -y git
+   11  ls
+   12  git clone https://github.com/devopsschool-lab-exercise/Broad-Hyd-Nov-Dec-2019
+   13  ls
+   14  cd Broad-Hyd-Nov-Dec-2019/
+   15  ls
+   16  cd chef
+   17  ls
+   18  cd Chef/
+   19  ls
+   20  mkdir malli
+   21  cd malli/
+   22  ls
+   23  vi malli.rb
+   24  chef apply
+   25  chef -apply malli.rb
+   26  ls
+   27  chef
+   28  chef -v
+   29  ls
+   30  chef-apply malli.rb
+   31  ls
+   32  vi malli2.rb
+   33  chef-apply malli2.rb
+   34  ls
+   35  vi malli3.rb
+   36  chef-apply malli3.rb
+   37  ls
+   38  vi malli3.rb
+   39  chef-apply malli3.rb
+   40  ls
+   41  path
+   42  pwd
+   43  vi malli3.rb
+   44  chef-apply malli3.rb
+   45  ls
+   46  cd /opt
+   47  ls
+   48  ls
+   49  ls
+   50  malli4.rb
+   51  vi malli.rb
+   52  vi malli5.rb
+   53  pwd
+   54  cd /home
+   55  cd ec2-user/
+   56  cd Broad-Hyd-Nov-Dec-2019/Chef/malli/
+   57  vi malli5.rb
+   58  chef-apply malli5.rb
+   59  pwd
+   60  cd /opt
+   61  ls
+   62  cd /home/ec2-user/Broad-Hyd-Nov-Dec-2019/Chef/malli
+   63  ls
+   64  vi malli6.rb
+   65  chef-apply malli6.rb
+   66  vi malli6.rb
+   67  chef-apply malli6.rb
+   68  vi malli7.rb
+   69  chef-apply malli7.rb
+   70  ls
+   71  pwd
+   72  cd /opt
+   73  ls
+   74  ls
+   75  cd https://github.com/scmgalaxy/chef-repo/tree/master/cookbooks
+   76  cd /home/ec2-user/Broad-Hyd-Nov-Dec-2019/Chef/malli
+   77  ls
+   78  vi malli7.rb
+   79  chef-apply malli7.rb
+   80  vi malli8.rb
+   81  chef-apply malli8.rb
+   82  groups
+   83  ls
+   84  ls
+   85  cd ../../
+   86  cd Chef/
+   87  cd malli/
+   88  git push origin master
+   89  cd ../../
+   90  ls
+   91  cd ../
+   92  ls
+   93  ls -a
+   94  git push origin master -f
+   95  cd Broad-Hyd-Nov-Dec-2019/
+   96  cd Chef/malli/
+   97  git push origin master -f
+   98  git push origin master -f
+   99  git pull origin master
+  100  ls
+  101  git push origin master
+  102  ls
+  103  git status
+  104  ls
+  105  git branch
+  106  git add .
+  107  git commit -m "hdjvksahjkhf"
+  108  git push origin master
+  109  git pull origin master
+  110   yum install tree
+  111  tree
+  112  vi recipes/default.rb
+  113  clear
+  114  chef-client --local-mode --runlist 'recipe[malliKAKA]'
+  115  ls
+  116  cd ..
+  117  ls
+  118  cd ..
+  119  ls
+  120  tree
+  121  cd ..
+  122  cd ..
+  123  tree
+  124  ls
+  125   cd Chef/
+  126   grep file*
+  127  cls
+  128  ls
+  129  cd malli/
+  130  ls
+  131  cd cookbooks/
+  132  ls
+  133  ls
+  134   ls file*
+  135  vi malliKAKA/recipes/new1.rb
+  136  chef-client --local-mode --runlist 'recipe[malliKAKA:new1]'
+  137  chef-client --local-mode --runlist 'recipe[malliKAKA::new1]'
+  138  chef-client --local-mode --runlist 'recipe[malliKAKA::new1]'
+  139  ls
+  140  cd ../../
+  141  ls
+  142  cd malli/
+  143  git pull origin master
+  144  git add .
+  145  git commit -m "adding cookbook"
+  146  git push origin master
+  147  ls
+  148  history
+============================================================
+file 'name' do
+  atomic_update              true, false
+  backup                     false, Integer
+  checksum                   String
+  content                    String
+  force_unlink               true, false
+  group                      String, Integer
+  inherits                   true, false
+  manage_symlink_source      true, false
+  mode                       String, Integer
+  owner                      String, Integer
+  path                       String # defaults to 'name' if not specified
+  rights                     Hash
+  verify                     String, Block
+  action                     Symbol # defaults to :create if not specified
+end
+
+
+task i:
+
+file 'malli2.html' do
+  content '<h>This is a placeholder for the home page.</h>'
+  mode '0755'
+  owner 'ec2-user'
+  group 'root'
+  action :touch
+end
+
+
+task 2:
+
+file 'ramesh2.html' do
+  content '<h>This is a placeholder for the home page.</h>'
+  mode '0755'
+  owner 'ec2-user'
+  group 'root'
+  action :touch
+end
+
+
+
+task3:
+
+file 'ramesh2.html' do
+  content '<h>This is a placeholder for the home page.</h>'
+  mode '0755'
+  owner 'ec2-user'
+  group 'root'
+  action :touch
+end
+
+
+tar_extract 'http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz' do
+  download_dir '/opt/'
+  
+end
+
+
+bash 'java-tarball' do
+  code <<-EOH
+  wget -c –header “Cookie: oraclelicense=accept-securebackup-cookie” http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz
+  mv /home/ec2-user/Broad-Hyd-Nov-Dec-2019/Chef/malli/jdk-8u131-linux-x64.tar.gz /opt/
+  tar -zxf jdk-8u131-linux-x64.tar.gz -c /opt/jdk-8u131-linux-x64.tar.gz
+  EOH
+end
+
+
+bash 'java-tarball' do
+  code <<-EOH
+  wget -c –header “Cookie: oraclelicense=accept-securebackup-cookie” http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz
+  mv /home/ec2-user/Broad-Hyd-Nov-Dec-2019/Chef/rameshm/jdk-8u131-linux-x64.tar.gz /opt/
+  tar -zxf jdk-8u131-linux-x64.tar.gz -c /opt/jdk-8u131-linux-x64.tar.gz
+  EOH
+end
+
+
+
+task5;
+directory '/opt/test' do
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
+end
+
+
+task 6:
+
+git_client 'default' do
+  action :install
+end
+
+bash 'git' do
+  code <<-EOH
+  yum install -y git
+  EOH
+end
+
+bash 'copy index' do
+  code <<-EOH
+    cp index.html /var/www/html
+    EOH
+end
+
+task7:
+
+git "/opt/" do
+  repository "https://github.com/scmgalaxy/chef-repo/tree/master/cookbooks"
+  reference "master"
+  action :sync
+end
+
+
+git 'test-repo' do
+  repository 'https://github.com/scmgalaxy/chef-repo/tree/master/cookbooks'
+  revision 'master'
+  action :sync
+end
+
+
+task8:
+
+group 'demogroup' do
+  action :create
+end
+
+
+
+
+
+
+
